@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  .markdown-body {
+    @apply leading-relaxed italic;
+  }
+  
+  .markdown-body p:first-of-type::first-letter {
+    @apply text-5xl font-bold mr-3 float-left text-[#8b4513];
+  }
+}
+@plugin "@tailwindcss/typography";
